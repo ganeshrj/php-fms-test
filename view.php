@@ -2,10 +2,10 @@
 <title>File management system</title>
 
 <body>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 <div id='main_div'>
 	<input type="button" value='Show File' id='show_files'>
-	<div id='file_div'></div>
+	<div id='file_div' style='display:none'></div>
 	<input type="button" value='Add File' id='add_file'>
 </div>
 <div id='text_div' >
@@ -22,7 +22,8 @@
   </form>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="view.js" type='text/javascript'></script>
 </body>
 </html>
