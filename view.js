@@ -10,13 +10,20 @@ $('body').on('click', '#add_file', function(event) {
 	
 });
 function addfile(){
-	
-	 dialog.dialog( "open" );
+	if($('#text_area').val()==''){
+
+	 	alert('Blank File Cant Be Created!');
+	}
+	else{
+		dialog.dialog( "open" );
+	}
 		
 }
 function createfile(){
 	 
-	
+	if($('#file_name').val()==''){
+		alert('File Name Cant Be Blank!');
+	}else{
 		$.ajax({
 		  method: 'post',
 		  url: "controller.php?method=savefile&text_area="+$('#text_area').val()+"&file_name="+$('#file_name').val(),
@@ -26,6 +33,7 @@ function createfile(){
 			}
 		});
 		location.reload();
+	}
 	
 }
 dialog = $( "#dialog-form" ).dialog({
@@ -40,8 +48,6 @@ dialog = $( "#dialog-form" ).dialog({
         }
       },
       close: function() {
-        form[ 0 ].reset();
-        allFields.removeClass( "ui-state-error" );
       }
     });
 

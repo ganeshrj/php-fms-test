@@ -3,14 +3,16 @@
 
 <body>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="css.css">
+<center><h2>File Management System</h2></center>
 <div id='main_div'>
-	<input type="button" value='Show File' id='show_files'>
+	<input type="button" value='Show Files' id='show_files'>
 	<div id='file_div' style='display:none'></div>
-	<input type="button" value='Add File' id='add_file'>
+  <div class="picture1" id='add_file' alt="Add New"  title="Add New">&nbsp;</div>
 </div>
-<div id='text_div' >
-<textarea id='text_area' name='text_area'></textarea>
-<input type='button' value='save' id='save' onclick="javascript:addfile()">
+<div id='text_div' ><br><br>
+<center><textarea id='text_area' name='text_area' rows='20' cols='50'></textarea><br><br>
+<input type='button' value='save' id='save' onclick="javascript:addfile()"></center>
 </div>
 <div id="dialog-form" title="Save As">
   <form>

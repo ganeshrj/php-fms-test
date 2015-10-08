@@ -30,12 +30,12 @@ function savefile(){
 }
 function showfiles(){
 	$conn =conn();
-	$sql = "SELECT autoid,file_name FROM tbl_files";
+	$sql = "SELECT * FROM tbl_files";
 	$result = $conn->query($sql);
 	if ($result->num_rows > 0) {
 	    
 	    while($row = $result->fetch_assoc()) {
-	        echo "<div id='myid_".$row["autoid"]."' class='editfile'>".$row["autoid"].") - File Name: " .$row["file_name"]."</div><br>";
+	        echo "<div id='myid_".$row["autoid"]."' class='editfile'>".$row["autoid"].") - File Name: " .$row["file_name"]." Created Time -".$row["created_time"]."</div><br>";
 	    }
 	} else {
 	    echo "0 results";
